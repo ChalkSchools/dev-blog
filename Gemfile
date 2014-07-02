@@ -7,3 +7,7 @@ gem "middleman-blog", "~> 3.5.3"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
+
+# Asset gems should not be required (per Middleman)
+# http://middlemanapp.com/basics/asset-pipeline/
+gem "zurb-foundation", require: false

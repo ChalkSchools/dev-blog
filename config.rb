@@ -101,3 +101,9 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+after_configuration do
+  foundation_path = Gem::Specification.find_by_name('zurb-foundation').gem_dir
+  #sprockets.append_path File.join(foundation_path, 'js')
+  sprockets.append_path File.join(foundation_path, 'scss')
+end
