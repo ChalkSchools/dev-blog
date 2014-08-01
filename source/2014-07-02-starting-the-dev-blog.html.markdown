@@ -7,3 +7,9 @@ authors: Holman Gao
 
 Wahoo!!!  Finally started a dev blog.  Hopefully we will actually write on
 this blog.
+
+```ruby
+def my_cool_method(message)
+  puts message
+end
+```
