@@ -31,7 +31,7 @@ elements to be positioned a bit differently (see
 Take, for example, the following setup based on the JSPerf I found
 [here](http://jsperf.com/jquery-append-one-by-one-vs-bulk):
 
-```
+```javascript
 var $container = $("#container");
 var $divs = []; for (var i = 0; i < 100; i++) { divs.push($("<div>")); }
 ```
@@ -40,7 +40,7 @@ var $divs = []; for (var i = 0; i < 100; i++) { divs.push($("<div>")); }
 If we tried to insert 100 of these divs into the page one at a time, the code
 would look like the following:
 
-```
+```javascript
 $container.empty();
 for (var i = 0; i < 100; i++) { $container.append($divs[i]); }
 ```
@@ -53,7 +53,7 @@ as a JS object and attached various callbacks / CSS properties.  Thus, it can
 take several tenths of a second for the initial page load to happen.  But what
 if we batch insert the entire array at once?
 
-```
+```javascript
 $container.empty(); container.append($divs);
 ```
 
