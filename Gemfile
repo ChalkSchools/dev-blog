@@ -9,6 +9,9 @@ gem "middleman-syntax"
 
 gem "redcarpet"
 
+gem "rake"
+gem "travis"
+
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 

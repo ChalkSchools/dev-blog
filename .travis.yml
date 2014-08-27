@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+  - 2.0.0
+before_script:
+  - bundle exec rake assets:precompile
+script:
+  - bundle exec travis lint --skip-completion-check
