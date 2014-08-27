@@ -7,9 +7,10 @@ gem "middleman-blog", "~> 3.5.3"
 gem "middleman-blog-authors"
 gem "middleman-syntax"
 
-gem "redcarpet"
-
+gem "puma"
+gem "rack-contrib"
 gem "rake"
+gem "redcarpet"
 gem "travis"
 
 # For feed.xml.builder
