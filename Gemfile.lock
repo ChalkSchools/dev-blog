@@ -107,10 +107,14 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    puma (2.9.0)
+      rack (>= 1.1, < 2.0)
     pusher-client (0.6.0)
       json
       websocket (~> 1.0)
     rack (1.5.2)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.3.2)
@@ -168,6 +172,8 @@ DEPENDENCIES
   middleman-blog (~> 3.5.3)
   middleman-blog-authors
   middleman-syntax
+  puma
+  rack-contrib
   rake
   redcarpet
   travis
