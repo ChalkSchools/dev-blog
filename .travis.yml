@@ -5,3 +5,9 @@ before_script:
   - bundle exec rake assets:precompile
 script:
   - bundle exec travis lint --skip-completion-check
+deploy:
+  provider: heroku
+  api_key:
+    secure: cofv/m6AsdTMxu9LihAqqGoqZn+owCFpHsl5G6PtD6Z3TsPJDKIq2CVJDK3Hl38XBihIw3+adz9pUCjb7tpJVYj/HzIpT8PsNEOkIvrHpz/LdVLaljYM0QuMibYSBgasxNCvQKqErVQu60C//mToP3jZNPIhgSrdmjVVVQIxrpg=
+  app:
+    secure: pDG0dIE0tR0UwZ0cf0WwroUBCdCpaunRSPXWroECIRLNMT1oblDOBKM8bvh85psZ7MxtDWBm7Fedv30RXTYPXP1/i3XjJfBf6u+EexTLKJvvBkBZSL/B1VvehcI6gwtGq71CCXiTH3aC+QhWAhMAU6iSNDG89PqM6xFiRZcPybA=
