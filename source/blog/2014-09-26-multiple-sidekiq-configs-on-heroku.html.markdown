@@ -5,6 +5,16 @@ tags: sidekiq, heroku
 authors: Holman Gao
 ---
 
+## Problem
+
+We heavily use Sidekiq for asynchronous jobs at Chalk, where we create jobs for
+tasks such as uploading files, sending emails, and processing documents.  We
+ran into an issue where we had several jobs that were hogging a ton of memory,
+and we needed to reduce the concurrency to keep those jobs from crashing.
+However, we also wanted to keep the concurrency high so that low intensity jobs
+(like sending out emails) could still complete quickly.
+READMORE
+
 ## TL;DR
 
 If you need to use two different Sidekiq configs on Heroku, it is super easy!
@@ -17,17 +27,7 @@ worker_1: bundle exec sidekiq -C config/sidekiq_1.yml
 worker_2: bundle exec sidekiq -C config/sidekiq_2.yml
 ```
 
-## Problem
-
-We heavily use Sidekiq for asynchronous jobs at Chalk, where we create jobs for
-tasks such as uploading files, sending emails, and processing documents.  We
-ran into an issue where we had several jobs that were hogging a ton of memory,
-and we needed to reduce the concurrency to keep those jobs from crashing.
-However, we also wanted to keep the concurrency high so that low intensity jobs
-(like sending out emails) could still complete quickly.
-
 Our app is deployed to Heroku.
-
 ## Solution
 
 We needed to create an additional worker, dedicated to handling the memory

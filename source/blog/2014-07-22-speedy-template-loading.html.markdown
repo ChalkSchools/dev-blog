@@ -18,7 +18,7 @@ being our document editor.  When working with some of the larger forms on our
 website, we started to notice problems that weren't present on the simpler
 forms.  Namely, when rendering tens (or hundreds) of Underscore templates into
 the DOM, the load time started to increase noticeably.
-
+READMORE
 ### The Problem
 
 DOM manipulations are always expensive.  That's just a byproduct of browsers

@@ -19,7 +19,7 @@ assistance of the [mailcheck library](https://github.com/mailcheck/mailcheck))
 but we've also got a lot of existing records in our database that we'd like to
 clean up. Hence, the [email repair
 gem](https://github.com/ChalkSchools/email-repair).
-
+READMORE
 ## What
 
 Email Repair does its best to make sense of whatever string you pass to it, and
